@@ -10,6 +10,11 @@ $ (document).ready( function() {
 
     var prevArrow = $('.slider-wrapper .prev') ;
 
+    var allCircle = $('.nav i.fa-circle') ;
+
+
+
+    // Move for arrow
 
     // Move next item
     nextArrow.click( function() {
@@ -25,8 +30,32 @@ $ (document).ready( function() {
 
     } );
 
+
+    // Move for circle
+
+    allCircle.click( function() {
+
+        // console.log( $(this) )
+
+        var thisCircle = $(this).find('i');
+
+        var numCircle = $(".nav i:nth-child(n)" );
+
+        // console.log(numCircle[0]);
+        //  console.log($( ".nav i:nth-child(n)" ));
+        // moveSlideCircle(thisCircle);
+
+        
+
+
+       
+
+    } );
+
     // End document ready
 } );
+
+
 
 
 /***************************************************
@@ -38,12 +67,17 @@ function moveSlide(direction){
 
     // console.log(direction);
 
+    // Reference arrow
+
     var firstActiveArrow = $('.slider-wrapper .images img.first');
 
     var lastActiveArrow = $('.slider-wrapper .images img.last');
 
     var activeArrow = $('.slider-wrapper .images img.active') ;
 
+
+
+    // Reference circle
 
     var firstActiveCircle = $('.nav i.first');
 
@@ -113,3 +147,14 @@ function moveSlide(direction){
        }
 
 };
+
+
+
+    //  Move for circle
+
+    function moveSlideCircle(circle){
+
+
+        console.log(circle);
+
+    }
