@@ -35,20 +35,10 @@ $ (document).ready( function() {
 
     allCircle.click( function() {
 
-        // console.log( $(this) )
 
-        var thisCircle = $(this).find('i');
+        var thisCircle = $(this) ;
 
-        var numCircle = $(".nav i:nth-child(n)" );
-
-        // console.log(numCircle[0]);
-        //  console.log($( ".nav i:nth-child(n)" ));
-        // moveSlideCircle(thisCircle);
-
-        
-
-
-       
+        moveSlideCircle(thisCircle);
 
     } );
 
@@ -154,7 +144,71 @@ function moveSlide(direction){
 
     function moveSlideCircle(circle){
 
+        var imgOne = $('.slider-wrapper .images img.img-1') ;
 
-        console.log(circle);
+        var imgTwo = $('.slider-wrapper .images img.img-2') ;
+
+        var imgThree = $('.slider-wrapper .images img.img-3') ;
+
+        var imgFour = $('.slider-wrapper .images img.img-4') ;
+
+
+        var circleOne = $('.nav i.first') ;
+
+        var circleTwo = $('.nav i.two') ;
+
+        var circleThree = $('.nav i.three') ;
+
+        var circleFour = $('.nav i.last') ;
+        
+
+
+        var activeCircle = $('.nav i.active') ;
+
+        var activeArrow = $('.slider-wrapper .images img.active') ;
+
+        var activeArrow = $('.slider-wrapper .images img.active') ;
+
+
+
+    // Reference circle
+
+    var firstActiveCircle = $('.nav i.first');
+
+    var lastActiveCircle = $('.nav i.last');
+
+    var activeCircle = $('.nav i.active') ;
+
+    
+        //  console.log(circle);
+
+
+        // Reset
+
+        activeCircle.removeClass('active');
+        activeArrow.removeClass('active');
+
+        if(circle.hasClass('first')){
+            
+            imgOne.addClass('active');
+            circleOne.addClass('active');
+
+        }else if (circle.hasClass('two')){
+
+            imgTwo.addClass('active');
+            circleTwo.addClass('active');
+
+        }else if(circle.hasClass('three')){
+
+            imgThree.addClass('active');
+            circleThree.addClass('active');
+
+        }else if(circle.hasClass('last')){
+
+            imgFour.addClass('active');
+            circleFour.addClass('active');
+
+        }
+
 
     }
