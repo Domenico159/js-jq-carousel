@@ -173,10 +173,6 @@ function moveSlide(direction){
 
     // Reference circle
 
-    var firstActiveCircle = $('.nav i.first');
-
-    var lastActiveCircle = $('.nav i.last');
-
     var activeCircle = $('.nav i.active') ;
 
     
