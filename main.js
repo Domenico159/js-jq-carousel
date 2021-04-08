@@ -19,7 +19,9 @@ $ (document).ready( function() {
     // Move next item
     nextArrow.click( function() {
 
+
         moveSlide('next');
+
 
     } );
 
@@ -40,6 +42,21 @@ $ (document).ready( function() {
 
         moveSlideCircle(thisCircle);
 
+    } );
+
+    // Move for keyCode
+
+    $(document).keydown( function(event) {
+
+        var thisCode = event.keyCode;
+
+        if(thisCode == 39){
+            moveSlide('next');
+        }else if (thisCode == 37){
+
+            moveSlide('prev');
+
+        }
     } );
 
     // End document ready
